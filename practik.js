@@ -24,7 +24,6 @@
 // console.log(getShortName())
 
 
-
 //     let arr = [
 //         {
 //             name: 'Pieter',
@@ -53,12 +52,71 @@
 // console.log(getName)
 
 
-
 // let arr0 = ['Pieter', 'john'];
 // let arr1 = ['Pen', 'Mary'];
 // const arr3 = [...arr0, ...arr1]
 // console.log(arr3)
 
 
+// const snakeToCamel = str =>
+//     str.toLowerCase().replace(/([-_][a-z])/g, group =>
+//         group
+//             .toUpperCase()
+//             .replace('-', '')
+//             .replace('_', '')
+//     );
+// console.log(snakeToCamel('to_camel_kjhvg'))
+
+
+// function getSum(num1, oper, num2){
+//     if (num1 == "" || num2 == "" || isNaN(num1) || isNaN(num2)){
+//         return false
+//     }else if (oper == '+'){
+//         return +num1 + +num2
+//     }
+//     else if (oper == '-'){
+//         return num1 - num2
+//     }else if (oper == '*'){
+//         return num1 * num2
+//     }else if (oper == '/'){
+//         return num1 / num2
+//     }
+// }
+//
+// console.log(getSum(5,'/',4))
+
+
+// const users = [
+//     {
+//         id: 1,
+//         name: 'John',
+//         age: 20
+//     },
+//     {
+//         id: 2,
+//         name: 'Marry',
+//         age: 22
+//     },
+//     {
+//         id: 3,
+//         name: 'Poll',
+//         age: 25
+//     },
+//
+// ]
+// let getUsers = users.map(function (item, index, array) {
+//     return item ? item.name : -1;
+// });
+//
+//     console.log(getUsers)
+
+
+
+
+// let arr = [6, 13, 'hammer', 18, 'ford'];
+// let getArr = arr.map(function (item, index, array) {
+//   return item ? item : -1
+//
+// console.log(getArr)
 
 
