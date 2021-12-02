@@ -58,6 +58,22 @@
 // console.log(arr3)
 
 
+// let arr = ['Pieter', 'john', 'Patrik', 'Pen', 'Pieter'];
+// let arr1 = ['Pen', 'Mary'];
+// function removeDuplicates(arr, arr1) {
+//     let arr2 = [];
+//     const fullArray = arr.concat(arr1);
+//     for (let item of fullArray) {
+//         if (!arr2.includes(item)) {
+//             arr2.push(item);
+//         }
+//     }
+//     return arr2;
+//
+// }
+//
+// console.log(removeDuplicates(arr, arr1));
+
 // const snakeToCamel = str =>
 //     str.toLowerCase().replace(/([-_][a-z])/g, group =>
 //         group
@@ -114,9 +130,15 @@
 
 
 // let arr = [6, 13, 'hammer', 18, 'ford'];
-// let getArr = arr.map(function (item, index, array) {
-//   return item ? item : -1
+// let getArr = arr.map(function (item) {
+//     if (!isNaN(item))
+//     return item * 2;
+//     else
+//        for (let char of item)
+//            return char
+// })
 //
 // console.log(getArr)
+
 
 
