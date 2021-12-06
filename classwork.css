@@ -1,0 +1,14 @@
+
+.colorRed{
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 5px;
+}
+.colorGreen{
+    width: 100px;
+    height: 100px;
+    background: green;
+    margin: 5px;
+}
+
