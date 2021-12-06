@@ -12,3 +12,17 @@
     margin: 5px;
 }
 
+.formclass{
+    margin-top: 50px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin: 5px;
+}
+button{
+    width: 150px;
+    font-size: 12px;
+    margin: 0 5px 10px 5px;
+}

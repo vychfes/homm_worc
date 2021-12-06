@@ -61,19 +61,11 @@ qwert1.onclick = function () {
 }
 
 elem7.onclick = function () {
-    let uls = document.getElementById('num').querySelectorAll('ul');
-    count = 0;
-        if (elem7.onclick) {
-            ++count;
-        }
+    let uls = document.getElementById('num');
+    let li = document.createElement("li");
+        li.innerText = "я пункт списка";
+        uls.appendChild(li);
 
-    let li;
-    for (let i = 0; i < uls.length; i++) {
-        li = document.createElement("li");
-        li.innerText = count;
-        uls[i].appendChild(li);
-
-    }
 }
 
 
@@ -81,18 +73,25 @@ elem7.onclick = function () {
 
 
 elem8.onclick = function (){
-    let stringArray = $document.getElementById('text8').value.split('\n');
+    let stringArray = document.getElementById('text8').value.split(',');
+let getOut = document.getElementById("out");
+let listText = document.createElement("ol");
+getOut.appendChild(listText);
+let numberItem = stringArray.length;
+let listItem;
+for (let i = 0; i < numberItem; ++i){
+    listItem = document.createElement("li");
+    listItem.innerHTML = stringArray[i];
+    listText.appendChild(listItem);
 }
-console.log(stringArray)
+
+}
 
 
 
 
-// document.getElementById('elem8').addEventListener('click', () => {
-//     let data = document.getElementById("text8").value;
-//     document.getElementById('out').innerHTML += data;
-//
-// })
+
+
 
 
 
