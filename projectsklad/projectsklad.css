@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    width: 800px;
+    height: 800px;
+}
+
+.formhed{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+.hed{
+width: 100px;
+    height: 30px;
+    font-size: 12px;
+    margin: 5px 10px;
+}
+.unitsmeasurement{
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    margin: 5px 10px;
+}
+.productlist{
+    margin: 0 auto;
+border: 1px solid black;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+}
+.productlist textarea{
+    width: 700px;
+    height: 400px;
+    margin: 0 30px;
+}
+.mysklad{
+    width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+.mysklad input{
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+
+}
+.newtov{
+
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+.newtov button{
+    width: 50px;
+    height: 30px;
+    font-size: 9px;
+
+}
+.newtov textarea{
+    width: 150px;
+    height: 30px;
+    font-size: 9px;
+}
+.formhed input {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+
+}
+.nameproduct{
+     width: 200px;
+     height: auto;
+     border: 1px solid gray;
+ }
+.general{
+    width: 100px;
+    height: auto;
+    border: 1px solid gray;
+}
+
+
+
+
