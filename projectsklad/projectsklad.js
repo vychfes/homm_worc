@@ -1,71 +1,128 @@
-but.onclick = function (){
-    let stringArray = document.getElementById('area').value.split(',');
-    let getOut = document.getElementById("nameprod");
-    let listText = document.createElement("ul");
-    getOut.appendChild(listText);
-    let numberItem = stringArray.length;
-    let listItem;
-    for (let i = 0; i < numberItem; ++i){
-        listItem = document.createElement("li");
-        listItem.innerHTML = stringArray[i];
-        listText.appendChild(listItem);
+let getProducts = JSON.parse(localStorage.getItem('products'))
+let productListUL = document.querySelector('.product-list');
+let productNumUl = document.querySelector('.number-product');
+let priceComingUl = document.querySelector('.price-coming');
+let priceRetailUl = document.querySelector('.price-retail');
+let priceWholesaleUl = document.querySelector('.price-wholesale');
+let unitUl = document.querySelector('.unit-product');
+if (getProducts) {
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].name;
+        productListUL.appendChild(listItem);
     }
-    console.log()
-// }
-// but.onclick = function (){
-//     let stringArray = document.getElementById('price').value.split(',');
-//     let getOut = document.getElementById("number");
-//     let listText = document.createElement("ol");
-//     getOut.appendChild(listText);
-//     let numberItem = stringArray.length;
-//     let listItem;
-//     for (let i = 0; i < numberItem; ++i){
-//         listItem = document.createElement("li");
-//         listItem.innerHTML = stringArray[i];
-//         listText.appendChild(listItem);
-//     }
-
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].number;
+        productNumUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].coming;
+        priceComingUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].retail;
+        priceRetailUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].sale;
+        priceWholesaleUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].select;
+        unitUl.appendChild(listItem);
+    }
 }
-// but.onclick = function (){
-//     let stringArray = document.getElementById('price1').value.split(',');
-//     let getOut = document.getElementById("priceprod1");
-//     let listText = document.createElement("ol");
-//     getOut.appendChild(listText);
-//     let numberItem = stringArray.length;
-//     let listItem;
-//     for (let i = 0; i < numberItem; ++i){
-//         listItem = document.createElement("li");
-//         listItem.innerHTML = stringArray[i];
-//         listText.appendChild(listItem);
-//     }
-//
-// }
-// but.onclick = function (){
-//     let stringArray = document.getElementById('price2').value.split(',');
-//     let getOut = document.getElementById("priceprod2");
-//     let listText = document.createElement("ol");
-//     getOut.appendChild(listText);
-//     let numberItem = stringArray.length;
-//     let listItem;
-//     for (let i = 0; i < numberItem; ++i){
-//         listItem = document.createElement("li");
-//         listItem.innerHTML = stringArray[i];
-//         listText.appendChild(listItem);
-//     }
-//
-// }
-// but.onclick = function (){
-//     let stringArray = document.getElementById('price3').value.split(',');
-//     let getOut = document.getElementById("priceprod3");
-//     let listText = document.createElement("ol");
-//     getOut.appendChild(listText);
-//     let numberItem = stringArray.length;
-//     let listItem;
-//     for (let i = 0; i < numberItem; ++i){
-//         listItem = document.createElement("li");
-//         listItem.innerHTML = stringArray[i];
-//         listText.appendChild(listItem);
-//     }
-//
-// }
 
+
+let button = document.getElementById("but");
+
+let products = [];
+
+button.onclick = function () {
+    let productName = document.getElementById("nameProduct").value;
+    let productNumber = document.getElementById("product_number").value;
+    let priceComing = document.getElementById("price_coming").value;
+    let priceRetail = document.getElementById("price_retail").value;
+    let priceSale = document.getElementById("price_wholesale").value;
+    let productUnit = document.getElementById("unit_product").value;
+    let product = {
+        name: productName,
+        number: productNumber,
+        coming: priceComing,
+        retail: priceRetail,
+        sale: priceSale,
+        unit: productUnit,
+    }
+
+    let allProducts = JSON.parse(localStorage.getItem('products'));
+    if (productNumber === '' || isNaN(productNumber) || priceComing === '' || isNaN(priceComing) || priceRetail === '' || isNaN(priceRetail) || priceSale === '' || isNaN(priceSale) || productName === '') {
+        return false
+    } else if (allProducts) {
+        allProducts.push(product);
+        window.localStorage.setItem("products", JSON.stringify(allProducts));
+    } else {
+        products.push(product);
+        window.localStorage.setItem("products", JSON.stringify(products));
+    }
+    let getProducts = JSON.parse(localStorage.getItem('products'))
+
+    while (productListUL.firstChild) {
+        productListUL.removeChild(productListUL.firstChild);
+    }
+    while (productNumUl.firstChild) {
+        productNumUl.removeChild(productNumUl.firstChild);
+    }
+    while (priceComingUl.firstChild) {
+        priceComingUl.removeChild(priceComingUl.firstChild);
+    }
+    while (priceRetailUl.firstChild) {
+        priceRetailUl.removeChild(priceRetailUl.firstChild);
+    }
+    while (priceWholesaleUl.firstChild) {
+        priceWholesaleUl.removeChild(priceWholesaleUl.firstChild);
+    }
+    while (unitUl.firstChild) {
+        unitUl.removeChild(unitUl.firstChild);
+    }
+
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].name;
+        productListUL.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].number;
+        productNumUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].coming;
+        priceComingUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].retail;
+        priceRetailUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].sale;
+        priceWholesaleUl.appendChild(listItem);
+    }
+    for (let i = 0; i < getProducts.length; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = getProducts[i].unit;
+        unitUl.appendChild(listItem);
+    }
+    document.getElementById("price_wholesale").value = '';
+    document.getElementById("price_retail").value = '';
+    document.getElementById("price_coming").value = '';
+    document.getElementById("product_number").value = '';
+    document.getElementById("nameProduct").value = '';
+}

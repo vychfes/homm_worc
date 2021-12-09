@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="projectsklad.css">
 </head>
 <body>
-<heder>
-    <form class="formhed">
 
+    <div class="formhed">
         <input  class="hed" type="text" id="int1" value="поиск">
         <input class="hed" type="text" id="price" value="кол-во">
         <input class="inputprice" type="text" id="price1" value="Прих. цена">
@@ -22,36 +21,48 @@
             <option value="2">кг</option>
             <option value="3">пач</option>
         </select>
-    </form>
-</heder>
+    </div>
+
 <div class="productlist" id="prodlist">
-    <div class="nameproduct" id="nameprod"></div>
-    <div class="numberproduct general" id="number"></div>
-    <div class="priceproduct1 general" id="priceprod1"></div>
-    <div class="priceproduct2 general" id="priceprod2"></div>
-    <div class="priceproduct3 general" id="priceprod3"></div>
-    <div class="unitproduct general" id="unit"></div>
+    <div class="nameproduct" id="nameprod">
+        <ol class="product-list"></ol>
+    </div>
+    <div class="numberproduct general" id="number">
+        <ul class="number-product"></ul>
+    </div>
+    <div class="priceproduct1 general" id="priceprod1">
+        <ul class="price-coming"></ul>
+    </div>
+    <div class="priceproduct2 general" id="priceprod2">
+        <ul class="price-retail"></ul>
+    </div>
+    <div class="priceproduct3 general" id="priceprod3">
+        <ul class="price-wholesale"></ul>
+    </div>
+    <div class="unitproduct general" id="unit">
+        <ul class="unit-product"></ul>
+    </div>
 </div>
-<form>
+
 <div id="sklad" class="mysklad">
     <div  class="newtov">
         <button id="but">добавить</button>
-    <textarea name="tov" id="area">sdgsvh, sdcsdc, sdcsadc, sdcasdc</textarea>
+    <textarea name="product" id="nameProduct"></textarea>
 
     </div>
-    <input class="inputprice" type="text" id="price" value="кол-во">
-    <input class="inputprice" type="text" id="price1" value="Прих. цена">
-    <input class="inputprice"  type="text" id="price2" value="Розн. цена">
-    <input class="inputprice"  type="text" id="price3" value="Опт. цена">
-    <select class="form-select unitsmeasurement" aria-label="Default select example">
+    <input class="inputprice" type="text" id="product_number" placeholder="кол-во">
+    <input class="inputprice" type="text" id="price_coming" placeholder="Прих. цена">
+    <input class="inputprice"  type="text" id="price_retail" placeholder="Розн. цена">
+    <input class="inputprice"  type="text" id="price_wholesale" placeholder="Опт. цена">
+    <select class="form-select unitsmeasurement" id="unit_product" aria-label="Default select example">
         <option selected>уп</option>
-        <option value="1">шт</option>
-        <option value="2">кг</option>
-        <option value="3">пач</option>
+        <option value="шт">шт</option>
+        <option value="кг">кг</option>
+        <option value="пач">пач</option>
     </select>
 
 </div>
-</form>
+
 <script src="projectsklad.js"></script>
 </body>
 </html>

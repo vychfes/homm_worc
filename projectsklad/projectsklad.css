@@ -86,7 +86,22 @@ border: 1px solid black;
     height: auto;
     border: 1px solid gray;
 }
+.number-product{
 
+   list-style-type: none;
+}
+.price-coming{
+    list-style-type: none;
+}
+.price-retail{
+    list-style-type: none;
+}
+.price-wholesale{
+    list-style-type: none;
+}
+.unit-product{
+    list-style-type: none;
+}
 
 
 
