@@ -1,43 +1,38 @@
-body{
-    margin: 0;
+body {
+    margin: 50px auto auto;
     width: 800px;
     height: 800px;
 }
 
-.formhed{
+.formhed {
     width: 700px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
-    align-items: center;
     justify-items: center;
+    align-items: center;
 }
-.hed{
-width: 100px;
-    height: 30px;
-    font-size: 12px;
-    margin: 5px 10px;
-}
-.unitsmeasurement{
+
+.unitsmeasurement {
     width: 100px;
     height: 30px;
     font-size: 12px;
-    margin: 5px 10px;
+
 }
-.productlist{
+
+.productlist {
     margin: 0 auto;
-border: 1px solid black;
+    border: 1px solid black;
     width: 700px;
     height: 400px;
     display: flex;
     flex-direction: row;
+    background: aliceblue;
+
 }
-.productlist textarea{
-    width: 700px;
-    height: 400px;
-    margin: 0 30px;
-}
-.mysklad{
+
+.mysklad {
     width: 700px;
     margin: 0 auto;
 
@@ -46,61 +41,104 @@ border: 1px solid black;
     justify-items: center;
     align-items: center;
 }
-.mysklad input{
+
+.mysklad input {
     width: 100px;
     height: 30px;
     font-size: 12px;
-
+    background: darkgray;
+    padding: 0 10px;
 }
-.newtov{
+
+.newtov {
 
     display: flex;
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
 }
-.newtov button{
+
+.newtov button {
     width: 50px;
     height: 30px;
     font-size: 9px;
+    background: khaki;
+
 
 }
-.newtov textarea{
+
+.newtov textarea {
     width: 150px;
     height: 30px;
     font-size: 9px;
+    padding: 5px 10px;
 }
+
 .formhed input {
     width: 100px;
     height: 30px;
     font-size: 12px;
+    background: darkgray;
+    padding: 0 10px;
 
 }
-.nameproduct{
-     width: 200px;
-     height: auto;
-     border: 1px solid gray;
- }
-.general{
+
+.nameproduct {
+    width: 200px;
+    height: auto;
+    border: 1px solid gray;
+}
+
+.general {
     width: 100px;
     height: auto;
     border: 1px solid gray;
 }
-.number-product{
 
-   list-style-type: none;
-}
-.price-coming{
+.number-product {
+
     list-style-type: none;
 }
-.price-retail{
+
+.price-coming {
     list-style-type: none;
 }
-.price-wholesale{
+
+.price-retail {
     list-style-type: none;
 }
-.unit-product{
+
+.price-wholesale {
     list-style-type: none;
+}
+
+.unit-product {
+    list-style-type: none;
+}
+
+.nameproductfilter {
+    width: 200px;
+    height: auto;
+    padding: 5px 10px;
+}
+
+h1 {
+    margin: 50px auto 20px;
+    text-align: center;
+}
+
+.formhed button {
+    width: 50px;
+    height: 30px;
+    font-size: 9px;
+    background: khaki;
+
+}
+
+.nameproductfilter {
+    width: 150px;
+    height: 30px;
+    font-size: 9px;
 }
 
 

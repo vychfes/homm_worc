@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <title>Projectsklad</title>
     <!-- Только CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="projectsklad.css">
 </head>
 <body>
-
-    <div class="formhed">
-        <input  class="hed" type="text" id="int1" value="поиск">
-        <input class="hed" type="text" id="price" value="кол-во">
-        <input class="inputprice" type="text" id="price1" value="Прих. цена">
-        <input class="inputprice"  type="text" id="price2" value="Розн. цена">
-        <input class="inputprice"  type="text" id="price3" value="Опт. цена">
-        <select class="form-select unitsmeasurement" aria-label="Default select example">
-            <option selected>уп</option>
-            <option value="1">шт</option>
-            <option value="2">кг</option>
-            <option value="3">пач</option>
-        </select>
-    </div>
+<h1>Добро пожаловать на мой склад</h1>
+<div class="formhed">
+    <button class="hed"  id="buttfiltr" value="Фильтр">Фильтр</button>
+    <textarea class="nameproductfilter" id="name_filter" placeholder="наименование товара"></textarea>
+    <input class="inputprice" type="number" id="number_filter" placeholder="кол-во">
+    <input class="inputprice" type="number" id="filter_coming" placeholder="Прих. цена">
+    <input class="inputprice" type="number" id="filter_retail" placeholder="Розн. цена">
+    <input class="inputprice" type="number" id="filter_sale" placeholder="Опт. цена">
+    <select class="form-select unitsmeasurement" id="filter_select" aria-label="Default select example">
+        <option selected>уп</option>
+        <option value="1">шт</option>
+        <option value="2">кг</option>
+        <option value="3">пач</option>
+    </select>
+</div>
 
 <div class="productlist" id="prodlist">
     <div class="nameproduct" id="nameprod">
@@ -45,15 +47,15 @@
 </div>
 
 <div id="sklad" class="mysklad">
-    <div  class="newtov">
+    <div class="newtov">
         <button id="but">добавить</button>
-    <textarea name="product" id="nameProduct"></textarea>
+        <textarea name="product" id="nameProduct" placeholder="наименование товара"></textarea>
 
     </div>
-    <input class="inputprice" type="text" id="product_number" placeholder="кол-во">
-    <input class="inputprice" type="text" id="price_coming" placeholder="Прих. цена">
-    <input class="inputprice"  type="text" id="price_retail" placeholder="Розн. цена">
-    <input class="inputprice"  type="text" id="price_wholesale" placeholder="Опт. цена">
+    <input class="inputprice" type="number" id="product_number" placeholder="кол-во">
+    <input class="inputprice" type="number" id="price_coming" placeholder="Прих. цена">
+    <input class="inputprice" type="number" id="price_retail" placeholder="Розн. цена">
+    <input class="inputprice" type="number" id="price_wholesale" placeholder="Опт. цена">
     <select class="form-select unitsmeasurement" id="unit_product" aria-label="Default select example">
         <option selected>уп</option>
         <option value="шт">шт</option>

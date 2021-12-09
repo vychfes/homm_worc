@@ -126,3 +126,82 @@ button.onclick = function () {
     document.getElementById("product_number").value = '';
     document.getElementById("nameProduct").value = '';
 }
+let buttonFilter = document.getElementById('buttfiltr');
+
+buttonFilter.onclick = function () {
+    let nameFilter = document.getElementById('name_filter').value;
+    let numberFilter = document.getElementById('number_filter').value;
+    let comingFilter = document.getElementById('filter_coming').value;
+    let retailFilter = document.getElementById('filter_retail').value;
+    let saleFilter = document.getElementById('filter_sale').value;
+    let selectFilter = document.getElementById('filter_select').value;
+    let result = getProducts.filter(function (el, index) {
+        if (nameFilter != "") {
+            return el.name === nameFilter;
+        } else if (numberFilter != '') {
+            return el.number === numberFilter;
+        } else if (comingFilter != '') {
+            return el.coming === comingFilter;
+        } else if (retailFilter != '') {
+            return el.retail === retailFilter;
+        } else if (saleFilter != '') {
+            return el.sale === saleFilter;
+        } else {
+            return el.unit === selectFilter;
+        }
+    })
+    while (productListUL.firstChild) {
+        productListUL.removeChild(productListUL.firstChild);
+    }
+    while (productNumUl.firstChild) {
+        productNumUl.removeChild(productNumUl.firstChild);
+    }
+    while (priceComingUl.firstChild) {
+        priceComingUl.removeChild(priceComingUl.firstChild);
+    }
+    while (priceRetailUl.firstChild) {
+        priceRetailUl.removeChild(priceRetailUl.firstChild);
+    }
+    while (priceWholesaleUl.firstChild) {
+        priceWholesaleUl.removeChild(priceWholesaleUl.firstChild);
+    }
+    while (unitUl.firstChild) {
+        unitUl.removeChild(unitUl.firstChild);
+    }
+
+
+    console.log(result)
+    if (result) {
+        for (let i = 0; i < result.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = result[i].name;
+            productListUL.appendChild(listItem);
+        }
+        for (let i = 0; i < result.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = result[i].number;
+            productNumUl.appendChild(listItem);
+        }
+        for (let i = 0; i < result.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = result[i].coming;
+            priceComingUl.appendChild(listItem);
+        }
+        for (let i = 0; i < result.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = result[i].retail;
+            priceRetailUl.appendChild(listItem);
+        }
+        for (let i = 0; i < result.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = result[i].sale;
+            priceWholesaleUl.appendChild(listItem);
+        }
+        for (let i = 0; i < result.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = result[i].select;
+            unitUl.appendChild(listItem);
+        }
+    }
+
+}
