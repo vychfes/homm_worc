@@ -12,14 +12,19 @@
     margin: 5px;
 }
 
-.formclass{
+.myForm{
     margin-top: 50px;
     width: 250px;
     display: flex;
     flex-direction: column;
 }
-input{
+.myForm input{
     margin: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+.myForm input:valid{
+    border: 1px red;
 }
 button{
     width: 150px;
